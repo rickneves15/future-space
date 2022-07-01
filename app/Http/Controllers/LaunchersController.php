@@ -22,10 +22,10 @@ class LaunchersController extends Controller
         }
 
         if ($request->status) {
-            $query->where('dataset', 'LIKE', "%{$request->search}%");
+            $query->orWhere('status', "%{$request->status}%");
         }
 
-        $launchers = $query->orderBy()->paginate($perPage);
+        $launchers = $query->paginate($perPage);
         return response()->json($launchers);
     }
 

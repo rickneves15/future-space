@@ -18,7 +18,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('import:launchers')
             ->weekdays()
             ->mondays()
-            ->between('22:00', '00:00');;
+            ->between('22:00', '00:00');
     }
 
     /**

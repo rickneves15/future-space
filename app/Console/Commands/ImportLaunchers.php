@@ -23,8 +23,8 @@ class ImportLaunchers extends Command
      */
     protected $description = 'Routine for importing launchers';
 
-    protected $LIMIT_PER_PAGE = 1;
-    protected $LIMIT_RECORDS = 2;
+    protected $LIMIT_PER_PAGE = 100;
+    protected $LIMIT_RECORDS = 2000;
 
     /**
      * Create a new command instance.
@@ -68,6 +68,7 @@ class ImportLaunchers extends Command
                 $launcherModel = new Launcher();
                 $launcherModel->dataset = $launcher;
                 $launcherModel->save();
+                array_push($launchers, $launcher);
             }
 
 
