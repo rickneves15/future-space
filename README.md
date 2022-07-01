@@ -1,6 +1,6 @@
 # Future Space
 
-API para a buscar as informações de lançamentos de foquetes.
+API para a busca de informações de lançamentos de foquetes.
 
 ## Instalação
 
